@@ -1,0 +1,303 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:whitesmoke;
+    min-width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: white;
+}
+.top-header{
+    display: flex;
+    padding: 2em 5em 2em 5em;
+    justify-content: space-around;
+}
+.header-items li{
+    display:inline-block ;
+    margin-right: 3em;
+    justify-content:space-between;
+    font-size: 15px;
+}
+.header-items a{
+    color: gray;
+}
+.header-items a:hover{
+    color: black;
+    padding-bottom: 20px;
+    border-bottom: 2px solid green;
+    font-weight: bold;
+}
+.logo{
+
+}
+/* request link */
+.request-link{
+    padding: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    line-height: 2px;
+}
+.hamburger{
+    display: none;
+}
+
+
+/* main */
+.top-bg{
+    display: flex;
+    
+}
+.top-bg-text{
+    width: 40%;
+    padding: 5em 0em 0em 10em;
+}
+h1{
+    font-size: 50px;
+}
+.top-bg-text p{
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.top-bg-background{
+    width: 60%;
+    z-index: -10;
+}
+.top-bg-background img{
+    width: 100%;
+    position: relative;
+    top: -150px;
+}
+.mockup img{ 
+    width: 40%;
+    position: absolute;
+    top: -20px;
+    left: 700px;
+    z-index: -10;
+}
+
+/* hide top background for mobile */
+.mockup-mobile{
+    display: none;
+}
+
+
+
+/* section B */
+.section-b{
+    background-color: ghostwhite;
+    padding:10em 10em 10em 10em;
+    position: relative;
+    top: -200;
+    z-index: -11;
+}
+
+.why-choose-us{
+    width: 40%;
+}
+
+h2{
+    font-size: 30px;
+    padding-bottom: 1em;
+}
+
+.why-choose-us p{
+    font-size: 18px;
+}
+
+.what-they-do,.latest-trends{
+    display: flex;
+    padding-top: 2em;
+}
+.online-banking{
+    width: 25%;
+    margin-right: 20px;
+}
+.online-banking h3, .latest-trend h3{
+    padding-top: 1em;
+}
+.online-banking p, .latest-trend p{
+    font-size: 15px;
+    font-weight: lighter;
+    padding-top: 1em;
+}
+
+/* section c */
+.section-c{
+    padding:1em 10em 0em 10em;
+
+}
+.latest-trend{
+    background-color: white;
+    width: 25%;
+    margin-right: 20px;
+}
+.latest-trend h5, .latest-trend h3, .latest-trend p{
+    padding: 0px 10px 0px 10px;
+}
+.latest-trend img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.latest-trend h3 a:hover{
+    color: green;
+}
+.latest-trend h3 a{
+    color: black;
+}
+
+
+/* footer */
+footer{
+    margin-top: 50px;
+    background-color: rgb(1, 1, 46);
+    padding: 5em 10em 5em 10em;
+}
+.socials li{
+    display: inline;
+}
+.socials img:hover{
+    color: green;
+}
+
+/* media query for mobile */
+
+@media (max-width:680px){
+    /* header */
+    header{
+        position: absolute;
+        z-index: 11;
+    }
+    
+    .header-items{
+        display: none;
+        justify-content: space-evenly;
+    }
+    .request-link{
+        display: none;
+    }
+    .top-header {
+        display: flex;
+        padding: 2em 2em 2em 2em;
+        justify-content: space-between;
+    }
+    .hamburger{
+        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* main */
+    .mockup{
+        display: block;
+        width: 100%;
+    position: absolute;
+    z-index:8;
+    }
+    .top-bg{
+        display: flex;
+        flex-direction: column;
+    }
+    .mockup-mobile{
+        display: block;
+        position: absolute;
+    z-index: -1;
+
+    }
+    .mockup-mobile img {
+        width: 100%;
+    }
+    .mockup img {
+        width: 100%;
+        position: absolute;
+        top: -40px;
+        left: 0px;
+        z-index: -10;
+    }
+    .top-bg-background{
+        display: none;
+    }
+    .top-bg-background img{
+        display: none;
+    }
+    .top-bg-text {
+        width: 100%;
+        padding: 30em 1em 2em 1em;
+        text-align: center;
+    }
+    .top-bg-text p{
+        color: gray;
+    }
+    h1{
+        font-size: 40px;
+    }
+
+    /* section B */
+    .what-they-do, .latest-trends{
+        display: flex;
+        flex-direction: column;
+    }
+    .section-b, .section-c {
+        width: 100%;
+        background-color: whitesmoke;
+        padding: 5em 2em 5em 2em;
+        top: 0px;
+       
+    }
+    .why-choose-us {
+        width: 100%;
+        text-align: center;
+    }
+    .online-banking{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .latest-trend{
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 1em;
+    }
+}
+
+/* @media (max-width:768px){
+    header{
+        position: absolute;
+        z-index: 11;
+    }
+    
+    .header-items{
+        display: none;
+        justify-content: space-evenly;
+    }
+    .request-link{
+        display: none;
+    }
+    .top-header {
+        display: flex;
+        padding: 2em 2em 2em 2em;
+        justify-content: space-between;
+    }
+    .hamburger{
+        display: inline-block;
+        display: flex;
+        justify-content: space-between;
+    }
+
+} */
